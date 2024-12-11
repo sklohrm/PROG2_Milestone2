@@ -23,6 +23,12 @@ public class MIPSaddiu extends MIPSInstruction {
         this(Integer.parseInt(hexString, 16));
     }
 
+    public int getRt() { return rt; }
+
+    public int getRs() { return rs; }
+
+    public int getImmediate() { return immediate; }
+
     @Override
     public String toHex(String[] instruction) {
         int rt = RegisterUtil.toDecimal(instruction[1]);

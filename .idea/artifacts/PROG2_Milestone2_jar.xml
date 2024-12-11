@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PROG2_Milestone2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PROG2_Milestone2_jar</output-path>
+    <root id="archive" name="PROG2_Milestone2.jar">
+      <element id="module-output" name="PROG2_Milestone2" />
+    </root>
+  </artifact>
+</component>

@@ -12,13 +12,11 @@ public class MIPSj extends MIPSInstruction {
 
     MIPSj() {}
 
-    public MIPSj(int hexCode) {
-        this.index = hexCode & 0x3FFFFFF;
-    }
+    public MIPSj(int hexCode) { this.index = hexCode & 0x3FFFFFF; }
 
-    public MIPSj(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSj(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getIndex() { return index; }
 
     @Override
     public String toHex(String[] instruction) {

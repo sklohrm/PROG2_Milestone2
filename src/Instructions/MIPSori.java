@@ -19,9 +19,13 @@ public class MIPSori extends MIPSInstruction {
         this.immediate = (hexCode & 0xFFFF);
     }
 
-    public MIPSori(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSori(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRt() { return rt; }
+
+    public int getRs() { return rs; }
+
+    public int getImmediate() { return immediate; }
 
     @Override
     public String toHex(String[] instruction) {

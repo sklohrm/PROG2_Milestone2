@@ -19,9 +19,13 @@ public class MIPSbeq extends MIPSInstruction {
         this.offset = (hexCode & 0xFFFF);
     }
 
-    public MIPSbeq(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSbeq(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRs() { return rs; }
+
+    public int getRt() { return rt; }
+
+    public int getOffset() { return offset; }
 
     @Override
     public String toHex(String[] instruction) {

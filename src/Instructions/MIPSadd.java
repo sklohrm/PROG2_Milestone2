@@ -20,9 +20,13 @@ public class MIPSadd extends MIPSInstruction {
         this.rd = (hexCode >> 11) & 0x1F;
     }
 
-    public MIPSadd(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSadd(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRs() { return rs; }
+
+    public int getRt() { return rt; }
+
+    public int getRd() { return rd; }
 
     @Override
     public String toHex(String[] instruction) {

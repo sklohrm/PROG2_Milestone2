@@ -20,9 +20,13 @@ public class MIPSsub extends MIPSInstruction {
         this.rd = (hexCode >> 11) & 0x1F;
     }
 
-    public MIPSsub(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSsub(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRd() { return rd; }
+
+    public int getRs() { return rs; }
+
+    public int getRt() { return rt; }
 
     @Override
     public String toHex(String[] instruction) {

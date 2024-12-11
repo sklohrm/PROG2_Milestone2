@@ -19,9 +19,13 @@ public class MIPSlw extends MIPSInstruction {
         this.base = (hexCode >> 21) & 0x1F;
     }
 
-    public MIPSlw(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSlw(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRt() { return rt; }
+
+    public int getOffset() { return offset; }
+
+    public int getBase() { return base; }
 
     @Override
     public String toHex(String[] instruction) {

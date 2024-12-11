@@ -13,9 +13,7 @@ public class MIPSsyscall extends MIPSInstruction {
 
     public MIPSsyscall(int hexCode) {}
 
-    public MIPSsyscall(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSsyscall(String hexString) { this(Integer.parseInt(hexString, 16)); }
 
     @Override
     public String toHex(String[] instruction) {

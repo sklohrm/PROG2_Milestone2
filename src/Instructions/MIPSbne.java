@@ -19,9 +19,13 @@ public class MIPSbne extends MIPSInstruction {
         this.offset = (hexCode & 0xFFFF);
     }
 
-    public MIPSbne(String hexString) {
-        this(Integer.parseInt(hexString, 16));
-    }
+    public MIPSbne(String hexString) { this(Integer.parseInt(hexString, 16)); }
+
+    public int getRs() { return rs; }
+
+    public int getRt() { return rt; }
+
+    public int getOffset() { return offset; }
 
     @Override
     public String toHex(String[] instruction) {
